@@ -4,5 +4,6 @@ console.log("Meu terceiro commit")
 console.log("commit 4")
 console.log("commit 5")
 console.log("commit 6")
+console.log("commit 7")
 
 
