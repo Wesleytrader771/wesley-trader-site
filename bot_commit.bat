@@ -1,5 +1,5 @@
 @echo off
-cd /d C:\Users\wesley\OneDrive\Área de Trabalho\meu-projeto
+cd /d "C:\Users\wesley\OneDrive\Área de Trabalho\meu-projeto"
 
 git pull
 
