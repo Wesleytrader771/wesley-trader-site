@@ -7,21 +7,21 @@ set count=1
 
 :loop
 
-:: cria arquivo novo (simula atividade real)
-echo Commit %count% - %random% > arquivo_%count%.txt
+:: cria arquivo diferente (mais real)
+set filename=dev_%random%_%count%.txt
+echo Conteudo real %random% %time% > %filename%
 
-:: também altera log (atividade contínua)
-echo Atualizacao %random% >> log.txt
+:: altera outro arquivo também
+echo Update %random% %date% %time% >> atividade.txt
 
 git add .
-git commit -m "update real %count%"
+git commit -m "real dev %date% %time%"
 git push
 
 set /a count+=1
 
-:: tempo aleatório entre commits (30 a 90 segundos)
-set /a tempo=(%random% %% 60) + 30
+:: tempo MAIS humano (2 a 5 minutos)
+set /a tempo=(%random% %% 180) + 120
 timeout /t %tempo% >nul
 
-:: limite de commits
-if %count% LEQ 20 goto loop
+if %count% LEQ 10 goto loop
